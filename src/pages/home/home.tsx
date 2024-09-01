@@ -1,5 +1,6 @@
 import Header from "../../components/common/Header"
 import Logo from "../../components/common/Logo"
+import Main from "../../components/common/Main"
 
 const HomePage = () => {
 
@@ -12,6 +13,7 @@ const HomePage = () => {
                 <div className="flex flex-col">
 
                     <Header/>
+                    <Main/>
                 </div>
 
             </div>

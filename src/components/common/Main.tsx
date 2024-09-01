@@ -3,8 +3,16 @@ import {Card , CardDescription, CardHeader, CardTitle, CardContent} from '../ui/
 import { Calendar } from '../ui/calendar'
 import { Button } from '../ui/button'
 import { Popover, PopoverTrigger, PopoverContent } from  '../ui/popover'
+import { LineChart } from '../spec/graficos/LineChart'
+import { BarChart } from '../spec/graficos/BarChart'
+
 import { ArrowLeftIcon, CalendarClockIcon} from '../../assets/icons'
+import { PieChart } from '../spec/graficos/PieChart'
+import { Queue_stats } from '../../interfaces/queue_stats'
+
 export default function Main() {
+
+    const filteredData : Queue_stats []  = []
     return (
         <div>
             <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
