@@ -6,7 +6,8 @@ export  interface Queue_stats {
     datetime: string 
     qname: number 
     qagent: number 
-    qevent : number  
+    qevent : number,
+    queue: number  
     info1: string 
     info2: string
     info3: string

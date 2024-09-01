@@ -1,7 +1,7 @@
 
 
 import { useState, useMemo } from "react"
-import Link from "next/link"
+import Link from "next/"
 import { Button } from "../../components/ui/button"
 import { Input } from "../../components/ui/input"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuItem } from "@/components/ui/dropdown-menu"
@@ -20,17 +20,17 @@ export default function Component() {
     event: "all",
     infoField: "all",
   })
-  const handleFilterChange = (key : any, value : any) => {
+  const handleFilterChange = (key: any, value: any) => {
     setFilters((prevFilters) => ({
       ...prevFilters,
       [key]: value,
     }))
   }
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const data :Queue_stats[] = [
-    
-  
-    { 
+  const data: Queue_stats[] = [
+
+
+    {
       queue_stats: 1,
       uniqueid: "abc123",
       datetime: "2024-09-01 08:00:00",
@@ -45,7 +45,7 @@ export default function Component() {
   ]
 
 
-    const filteredData = useMemo(() => {
+  const filteredData = useMemo(() => {
     return data.filter((item) => {
       /**
        * 
@@ -66,7 +66,7 @@ export default function Component() {
        */
     })
   }, [filters, data])
-  
+
 
   return (
     <div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
@@ -82,6 +82,8 @@ export default function Component() {
               <span className="sr-only">Toggle notifications</span>
             </Button>
           </div>
+
+
           <div className="flex-1 overflow-auto py-2">
             <nav className="grid items-start px-4 text-sm font-medium">
               <Link
@@ -118,8 +120,16 @@ export default function Component() {
               </Link>
             </nav>
           </div>
+       
+       
         </div>
       </div>
+
+
+
+
+
+
       <div className="flex flex-col">
         <header className="flex h-14 items-center gap-4 border-b bg-muted/40 px-6">
           <Link href="#" className="lg:hidden" prefetch={false}>
@@ -162,6 +172,10 @@ export default function Component() {
             </DropdownMenuContent>
           </DropdownMenu>
         </header>
+
+
+
+        
         <main className="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
           <div className="flex items-center gap-4">
             <Button variant="outline" size="icon">
@@ -358,7 +372,7 @@ export default function Component() {
   )
 }
 
-function ArrowLeftIcon(props : any) {
+function ArrowLeftIcon(props: any) {
   return (
     <svg
       {...props}
